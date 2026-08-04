@@ -70,17 +70,24 @@ export default function decorate(block) {
     const content = document.createElement('div');
     content.className = 'video-text-copy';
 
-    // Heading: first heading element, or first <p> treated as heading
-    const headingEl = col1.querySelector('h1, h2, h3, h4');
+    // Heading: first heading element OR first <p> promoted to h2.
+    // AEM xwalk text fields render as <p>, so we always promote the first
+    // paragraph to h2 when no explicit heading tag is present.
+    const headingEl = col1.querySelector('h1, h2, h3, h4')
+      || col1.querySelector('p');
+
     if (headingEl) {
       const h2 = document.createElement('h2');
       h2.innerHTML = headingEl.innerHTML;
       content.append(h2);
     }
 
-    // Body text: all remaining paragraphs / rich content after the heading
+    // Body text: clone col1, remove the heading element (whichever was used)
     const bodyClone = col1.cloneNode(true);
-    bodyClone.querySelector('h1, h2, h3, h4')?.remove();
+    // Remove the first h1-h4 if present, else remove the first <p> (used as heading)
+    const headingToRemove = bodyClone.querySelector('h1, h2, h3, h4')
+      || bodyClone.querySelector('p');
+    headingToRemove?.remove();
 
     // Strip the CTA link paragraph (last <p> containing only a link)
     const paras = [...bodyClone.querySelectorAll('p')];
