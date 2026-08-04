@@ -1,10 +1,10 @@
 {
   "mappings":[
-    "/content/gehc-events/:/",
-    "/content/gehc-events/configuration:/.helix/config.json",
-    "/content/gehc-events/metadata:/metadata.json"
+    "/content/ge-events/:/",
+    "/content/ge-events/configuration:/.helix/config.json",
+    "/content/ge-events/metadata:/metadata.json"
   ],
   "includes":[
-     "/content/gehc-events/"
+     "/content/ge-events/"
   ]
 }
