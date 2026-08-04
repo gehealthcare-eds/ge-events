@@ -5,6 +5,6 @@
     "/content/gehc-events/metadata:/metadata.json"
   ],
   "includes":[
-     "/content/gehc-events/",
+     "/content/gehc-events/"
   ]
 }
