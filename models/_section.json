@@ -50,7 +50,20 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "quote",
+        "video-text",
+        "event-list",
+        "offer",
+        "announcement-bar",
+        "faq-details",
+        "products-solutions",
+        "event-hero",
+        "section-nav",
+        "content-band",
+        "activity-list",
+        "feature-cards",
+        "experience-fragment"
       ]
     }
   ]

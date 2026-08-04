@@ -15,7 +15,26 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "quote",
+      "video-text",
+      "event-list",
+      "offer",
+      "announcement-bar",
+      "faq-details",
+      "products-solutions",
+      "event-hero",
+      "section-nav",
+      "content-band",
+      "activity-list",
+      "feature-cards",
+      "experience-fragment"
+    ]
+  },
+  {
+    "id": "activity-list",
+    "components": [
+      "activity-item"
     ]
   },
   {
@@ -37,6 +56,36 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "faq-details",
+    "components": [
+      "faq-item"
+    ]
+  },
+  {
+    "id": "feature-cards",
+    "components": [
+      "feature-card"
+    ]
+  },
+  {
+    "id": "products-solutions",
+    "components": [
+      "product-category"
+    ]
+  },
+  {
+    "id": "section-nav",
+    "components": [
+      "section-nav-item"
+    ]
+  },
+  {
+    "id": "video-text",
+    "components": [
+      "video-text-item"
     ]
   }
 ]
