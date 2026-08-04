@@ -1,17 +1,3 @@
-/*
- * FAQ Details Block
- *
- * Parent model cells (xwalk/max-cells ≤ 4 via element grouping):
- *   [0] heading_*  – title, intro (richtext), summary (textarea)
- *   [1] details_*  – image, toggles, pickers, tags, etc. (container)
- *   [2] help_*     – CTA link (container + field collapse)
- *   classes        – style variant (block option, not a content row)
- *
- * Child rows (faq-item via filter):
- *   [0] question – text
- *   [1] answer   – richtext
- */
-
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 function getCellText(el) {
@@ -129,7 +115,6 @@ export default function decorate(block) {
       expandFirst,
       showNumbers,
     });
-    // Preserve UE instrumentation when moving content from row div to accordion item
     moveInstrumentation(row, item);
     item.setAttribute('role', 'listitem');
     list.append(item);

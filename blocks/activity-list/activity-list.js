@@ -1,9 +1,3 @@
-/*
- * Activity List – reusable onsite/workshop activities with detail popup
- * Parent: heading_*
- * Item cells: image | content_* | meta_* | detail
- */
-
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 

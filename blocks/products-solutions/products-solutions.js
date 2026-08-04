@@ -1,18 +1,5 @@
 /*
  * Products & Solutions Block – GE HealthCare Events
- *
- * Matches the ESC "Our products and solutions" pattern:
- * grid of category tiles → click opens a detail popup with asset carousel + CTAs.
- *
- * Parent rows (grouped):
- *   [0] heading_*  – section title
- *   [1] actions_*  – request info / demo links + disclaimer
- *
- * Child rows (product-category):
- *   [0] image (+ imageAlt)
- *   [1] content_*  – title, description, hide flags
- *   [2] cta (+ ctaText) – learn more / see more innovations
- *   [3] assets (multi) – optional list of product assets
  */
 
 import { createOptimizedPicture } from '../../scripts/aem.js';
@@ -54,7 +41,6 @@ function parseAssets(assetsCell) {
 
     let title = textOf(titleEl);
     if (!title && paragraphs.length) {
-      // first short plain paragraph often is the title when no heading exists
       const [firstParagraph] = paragraphs;
       const tmp = document.createElement('div');
       tmp.innerHTML = firstParagraph;

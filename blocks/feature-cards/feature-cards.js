@@ -1,9 +1,3 @@
-/*
- * Feature Cards – reusable card grid (Highlights, Theater, Resources, News)
- * Parent: classes + heading_*
- * Item: image | content_* | cta(+Text)
- */
-
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
