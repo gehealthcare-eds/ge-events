@@ -19,7 +19,6 @@ indices:
       - '/events/**'
     exclude:
       - '/**.json'
-      - '/events$'
     target: /events/query-index.json
     properties:
       title:

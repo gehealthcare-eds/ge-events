@@ -6,7 +6,8 @@ async function fetchEvents() {
   }
 
   const { data } = await response.json();
-  return data;
+  const events = data.filter((event) => event.path !== '/events');
+  return events;
 }
 
 function formatDateRange(startDate, endDate) {
