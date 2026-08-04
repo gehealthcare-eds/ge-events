@@ -1,0 +1,9 @@
+{
+  "mappings":[
+    "/content/gehc-events/:/",
+     "/content/gehc-events/configuration:/.helix/config.json",
+  ],
+  "includes":[
+     "/content/gehc-events/",
+  ]
+}
