@@ -39,27 +39,21 @@
         {
           "component": "multiselect",
           "name": "classes",
-          "label": "Classes",
+          "label": "Layout Variant",
+          "valueType": "string",
           "options": [
             {
               "name": "Layout Variants",
               "children": [
-                {
-                  "name": "Video on Left",
-                  "value": "video-left"
-                },
-                {
-                  "name": "Video on Right",
-                  "value": "video-right"
-                },
-                {
-                  "name": "Dark Background",
-                  "value": "dark"
-                },
-                {
-                  "name": "Light Background",
-                  "value": "light"
-                }
+                { "name": "Video on Left", "value": "video-left" },
+                { "name": "Video on Right", "value": "video-right" }
+              ]
+            },
+            {
+              "name": "Background",
+              "children": [
+                { "name": "Dark Background", "value": "dark" },
+                { "name": "Light Background", "value": "light" }
               ]
             }
           ]
@@ -70,6 +64,11 @@
       "id": "video-text-item",
       "fields": [
         {
+          "component": "tab",
+          "label": "Text Content",
+          "name": "tabText"
+        },
+        {
           "component": "text",
           "valueType": "string",
           "name": "col1_heading",
@@ -79,41 +78,49 @@
         {
           "component": "richtext",
           "name": "col1_text",
-          "value": "",
-          "label": "Text Content",
-          "valueType": "string"
+          "label": "Body Text",
+          "valueType": "string",
+          "value": ""
         },
         {
           "component": "aem-content",
           "name": "col1_cta",
-          "value": "",
-          "label": "Call-to-Action Link",
+          "label": "CTA Link",
           "valueType": "string"
         },
         {
           "component": "text",
           "name": "col1_ctaText",
-          "label": "Call-to-Action Text",
-          "valueType": "string"
+          "label": "CTA Label",
+          "valueType": "string",
+          "value": "Learn More"
+        },
+        {
+          "component": "tab",
+          "label": "Video",
+          "name": "tabVideo"
         },
         {
           "component": "text",
-          "name": "col1_videoUrl",
-          "label": "Video URL (YouTube/Vimeo/MP4)",
-          "valueType": "string"
+          "name": "col2_videoUrl",
+          "label": "Video URL (YouTube / Vimeo / MP4)",
+          "description": "Paste a full YouTube or Vimeo URL, or a bare YouTube video ID.",
+          "valueType": "string",
+          "value": ""
         },
         {
           "component": "reference",
           "valueType": "string",
-          "name": "col1_videoThumbnail",
-          "label": "Video Thumbnail (Optional)",
+          "name": "col2_videoThumbnail",
+          "label": "Fallback Image (shown if no video URL)",
           "multi": false
         },
         {
           "component": "text",
-          "name": "col1_videoThumbnailAlt",
-          "label": "Video Thumbnail Alt Text (Optional)",
-          "valueType": "string"
+          "name": "col2_videoThumbnailAlt",
+          "label": "Fallback Image Alt Text",
+          "valueType": "string",
+          "value": ""
         }
       ]
     }

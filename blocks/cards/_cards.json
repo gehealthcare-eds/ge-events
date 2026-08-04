@@ -24,8 +24,7 @@
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
               "name": "Card",
-              "model": "card",
-              "key-value": true
+              "model": "card"
             }
           }
         }
@@ -38,45 +37,49 @@
       "fields": [
         {
           "component": "text",
-          "name": "category",
-          "label": "Category"
+          "name": "col1_category",
+          "label": "Category",
+          "valueType": "string",
+          "value": ""
         },
         {
           "component": "text",
-          "name": "title",
-          "label": "Event Title"
+          "name": "col2_title",
+          "label": "Event Title",
+          "valueType": "string",
+          "value": ""
         },
         {
           "component": "richtext",
-          "name": "event-info",
-          "label": "Event Information"
+          "name": "col2_eventInfo",
+          "label": "Event Information",
+          "valueType": "string",
+          "value": ""
         },
         {
           "component": "reference",
           "valueType": "string",
-          "name": "icon",
+          "name": "col3_icon",
           "label": "Icon",
           "multi": false
         },
         {
           "component": "select",
-          "name": "background",
+          "name": "col3_background",
           "label": "Background",
+          "valueType": "string",
+          "value": "",
           "options": [
-            {
-              "name": "Violet",
-              "value": "Violet"
-            },
-            {
-              "name": "Light Gray",
-              "value": "light-gray"
-            }
+            { "name": "None", "value": "" },
+            { "name": "Violet", "value": "Violet" },
+            { "name": "Light Gray", "value": "light-gray" }
           ]
         },
         {
-          "component": "text",
-          "name": "link",
-          "label": "Card Link"
+          "component": "aem-content",
+          "name": "col4_link",
+          "label": "Card Link",
+          "valueType": "string"
         }
       ]
     }

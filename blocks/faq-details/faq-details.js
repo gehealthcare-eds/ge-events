@@ -12,6 +12,8 @@
  *   [1] answer   – richtext
  */
 
+import { moveInstrumentation } from '../../scripts/scripts.js';
+
 function getCellText(el) {
   return el?.textContent?.trim() || '';
 }
@@ -127,6 +129,8 @@ export default function decorate(block) {
       expandFirst,
       showNumbers,
     });
+    // Preserve UE instrumentation when moving content from row div to accordion item
+    moveInstrumentation(row, item);
     item.setAttribute('role', 'listitem');
     list.append(item);
   });

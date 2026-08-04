@@ -1,6 +1,7 @@
 /*
  * Section Nav – reusable in-page sticky anchor navigation
  */
+import { moveInstrumentation } from '../../scripts/scripts.js';
 
 function textOf(el) {
   return el?.textContent?.trim() || '';
@@ -44,6 +45,8 @@ export default function decorate(block) {
       href = a?.getAttribute('href') || '#';
     }
     const li = document.createElement('li');
+    // Preserve UE instrumentation when moving content from row div to li
+    moveInstrumentation(row, li);
     const a = document.createElement('a');
     a.href = href;
     a.textContent = label;
