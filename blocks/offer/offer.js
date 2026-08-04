@@ -2,8 +2,7 @@ import config from '../../scripts/config.js';
 
 export default async function decorate(block) {
   const aemHost = config.host;
-  const persistedQuery = '/graphql/execute.json/eds-events-gehealthcare/OfferByPath';
-
+  const persistedQuery = '/graphql/execute.json/ge-events/offerByPath';
   const offerPath = block.querySelector(':scope > div:nth-child(1) a')?.textContent.trim();
 
   if (!offerPath) {
