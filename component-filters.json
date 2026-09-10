@@ -28,7 +28,8 @@
       "content-band",
       "activity-list",
       "feature-cards",
-      "experience-fragment"
+      "experience-fragment",
+      "video"
     ]
   },
   {
@@ -87,5 +88,9 @@
     "components": [
       "video-text-item"
     ]
+  },
+  {
+    "id": "video",
+    "components": []
   }
 ]

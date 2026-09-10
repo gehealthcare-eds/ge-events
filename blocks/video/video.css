@@ -1,0 +1,70 @@
+/* ---------- Video Block ---------- */
+
+.video {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video .video-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---------- Responsive iframe embed (16:9) ---------- */
+
+.video .video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.video .video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- Native video ---------- */
+
+.video .video-native {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+/* ---------- Caption ---------- */
+
+.video .video-caption {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+  text-align: center;
+}
+
+/* ---------- Tablet (600px+) ---------- */
+
+@media (width >= 600px) {
+  .video .video-caption {
+    font-size: 15px;
+  }
+}
+
+/* ---------- Desktop (900px+) ---------- */
+
+@media (width >= 900px) {
+  .video {
+    max-width: 900px;
+  }
+
+  .video .video-caption {
+    font-size: 16px;
+  }
+}

@@ -1527,5 +1527,25 @@
         "value": ""
       }
     ]
+  },
+  {
+    "id": "video",
+    "fields": [
+      {
+        "component": "text",
+        "name": "col1_videoUrl",
+        "label": "Video URL",
+        "valueType": "string",
+        "value": "",
+        "description": "YouTube, Vimeo, or direct MP4/WebM URL"
+      },
+      {
+        "component": "text",
+        "name": "col2_caption",
+        "label": "Caption",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
   }
 ]
